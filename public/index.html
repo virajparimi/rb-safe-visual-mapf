@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Risk-Bounded-Safe-Visual-MAPF, Risk-Bounded Safe Visual Multi-Agent Path Finding">
+  <meta property="og:title" content="Risk-Bounded Safe Visual Multi-Agent Path Finding"/>
+  <meta property="og:description" content="Risk-Bounded Safe Visual Navigation using Goal-Conditioned Safe Reinforcement Learning"/>
+  <meta property="og:url" content="rb-safe-visual-mapf-mers.csail.mit.edu"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/mers_logo.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="keywords" content="Path Planning for Multiple Mobile Robots or Agents; Multi-Robot Systems; Autonomous Agents; Reinforcement Learning; Safe Reinforcement Learning; Safe Reinforcement Learning; Goal-Conditioned Reinforcement Learning; Planning and Learning; Risk-Bounded Planning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Risk-Bounded Multi-Agent Visual Navigation via Dynamic Budget Allocation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://people.csail.mit.edu/vparimi/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://info-mapf-mers.csail.mit.edu/">
+            Info-MAPF
+          </a>
+          <a class="navbar-item" href="https://safe-visual-mapf-mers.csail.mit.edu/">
+            Safe-Visual-MAPF
+          </a>
+          <a class="navbar-item" href="https://diff-mapf-mers.csail.mit.edu/">
+            Diff-MAPF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+          <div class="title is-1 publication-title">
+            <a href="https://mers.csail.mit.edu/" target="_blank">
+              <img src="static/images/mers_logo.png" alt="MERS" style="width: 100px; vertical-align: middle; margin-right: 10px;">
+            </a>
+            <h1>Risk-Bounded Multi-Agent Visual Navigation via Dynamic Budget Allocation</h1>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://people.csail.mit.edu/vparimi/" target="_blank">Viraj Parimi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.csail.mit.edu/person/brian-williams" target="_blank">Brian Williams</a>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Massachusetts Institute of Technology<br>
+              <a href="https://openreview.net/pdf?id=W1tW6mCAqJ" target="_blank">ICAPS '25 PRL</a><br>
+              <a href="https://openreview.net/pdf?id=LBuLtnZwvZ" target="_blank">CoRL '25 SAFE-ROL</a><br>
+            </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Arxiv PDF link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2502.17813" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- Github link -->
+              <span class="link-block">
+                <a href="https://gitlab.com/mit-mers/safe-visual-mapf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (coming soon)</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.08157" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center;">
+        <h1 class="title has-text-centered">
+          High-Level Overview of the Visual Navigation Approach
+        </h1>
+          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+          <img src="static/images/visual_navigation_approach_top_down.svg" alt="Top Down Approach" style="width: 45%; margin-bottom: 20px;" />
+          <img src="static/images/visual_navigation_approach.svg" alt="Low-Level Approach" style="width: 45%;" />
+          </div>
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered">
+        We introduce our novel approach for <font color="#980000"><b>Safe Multi-Agent Visual Navigation</b></font> that fuses traditional planning with safe reinforcement learning to navigation hazardous environments. By leveraging learned value functions, the method constructs and prunes a dynamic graph of waypoints, striking a balance between speed and safety - even for multi-agent systems. This integration not only overcomes long-horizon challenges but also paves the way for efficient, coordinated autonomous navigation in complex settings. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center;">
+        <h1 class="title has-text-centered">
+          High-Level Overview of the Visual Navigation Approach
+        </h1>
+        <img src="static/images/overview.svg" alt="High-Level Overview"/> 
+      </div>
+      <br>
+      <h2 class="subtitle has-text-centered">
+        We introduce our novel approach for <font color="#980000"><b>Safe Multi-Agent Visual Navigation</b></font> that fuses traditional planning with safe reinforcement learning to navigation hazardous environments. By leveraging learned value functions, the method constructs and prunes a dynamic graph of waypoints, striking a balance between speed and safety - even for multi-agent systems. This integration not only overcomes long-horizon challenges but also paves the way for efficient, coordinated autonomous navigation in complex settings. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Safe navigation is essential for autonomous systems operating in hazardous environments, especially when multiple agents must coordinate using just visual inputs over extended time horizons. Traditional planning methods excel at solving long-horizon tasks but rely on predefined distance metrics, while safe Reinforcement Learning (RL) can learn complex behaviors using high-dimensional inputs yet struggles with multi-agent, goal-conditioned scenarios. Recent work combined these paradigms by leveraging goal-conditioned RL (GCRL) to build an intermediate graph from replay buffer states, pruning unsafe edges, and using Conflict-Based Search (CBS) for multi-agent path planning. Although effective, this graph-pruning approach can be overly conservative, limiting mission efficiency by precluding missions that must traverse high‐risk regions. To address this limitation, we propose RB-CBS, a novel extension to CBS that dynamically allocates and adjusts user-specified risk bound (&Delta;) across agents to flexibly trade off safety and speed. Our improved planner ensures that each agent receives a local risk budget (&delta;) enabling more efficient navigation while still respecting overall safety constraints. Experimental results demonstrate that this iterative risk-allocation framework yields superior performance in complex environments, allowing multiple agents to find collision-free paths within the user-specified (&Delta;).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 20px;">
+            Single-Agent PointNav Comparison
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/safe_single_agent_pointenv_comparison.svg" alt="Single-Agent Point Navigation Comparison"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Risk-bounded rollouts in the PointNav benchmark hold tighter obstacle clearances than baselines while maintaining similar arrival times.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 20px;">
+            Single-Agent Habitat Comparison
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/safe_single_agent_habitatenv_comparison.svg" alt="Single-Agent Habitat Environment Comparison"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Using only onboard vision, our policy learns safer, more deliberate routes through cluttered Habitat scenes compared to prior work.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 20px;">
+            Multi-Agent PointNav Comparison
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/safe_multi_agent_pointenv_comparison.svg" alt="Multi-Agent Point Navigation Comparison"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            Dynamic budget allocation keeps multiple PointNav agents in sync, reducing risk accumulation even when paths intersect in tight corridors.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 20px;">
+            Multi-Agent Habitat Comparison
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/safe_multi_agent_habitatenv_comparison.svg" alt="Multi-Agent Habitat Environment Comparison"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
+            In photorealistic interiors, RB-CBS coordinates several robots to avoid collisions and high-cost regions better than existing planners.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- PointNav bars carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="pointenv-carousel" class="carousel results-carousel">
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            PointNav (Easy)
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/pointenv_easy_10.svg" alt="PointNav Easy Scenario Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Risk-aware rollouts maintain near-baseline success on easy scenes while keeping cumulative cost within the user budget.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            PointNav (Medium)
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/pointenv_medium_10.svg" alt="PointNav Medium Scenario Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            On medium-difficulty layouts the tighter risk allocation clearly reduces collision cost compared to the unconstrained baselines.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            PointNav (Hard)
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/pointenv_hard_10.svg" alt="PointNav Hard Scenario Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Even in the hardest PointNav settings RB-CBS preserves mission feasibility while dramatically lowering experienced risk.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End PointNav bars carousel -->
+
+<!-- Habitat bars carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="habitat-carousel" class="carousel results-carousel">
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC0 Staging 20 – Easy
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc0_staging_20_easy_10.svg" alt="Habitat SC0 Staging 20 Easy Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            RB-CBS preserves easy-stage success rates in SC0 while keeping cumulative hazard cost within the specified bound.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC0 Staging 20 – Medium
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc0_staging_20_medium_10.svg" alt="Habitat SC0 Staging 20 Medium Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            On SC0 medium scenes, dynamic risk allocation produces safer routes without sacrificing goal attainment.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC0 Staging 20 – Hard
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc0_staging_20_hard_10.svg" alt="Habitat SC0 Staging 20 Hard Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Even in tight SC0 layouts, the planner keeps collisions low while completing almost every mission.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC2 Staging 08 – Easy
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc2_staging_08_easy_10.svg" alt="Habitat SC2 Staging 08 Easy Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Stage SC2 easy apartments show RB-CBS staying inside the safety envelope with negligible slowdown.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC2 Staging 08 – Medium
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc2_staging_08_medium_10.svg" alt="Habitat SC2 Staging 08 Medium Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Medium SC2 scenes highlight how the shared budget is redistributed to the agents facing higher risk.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC2 Staging 08 – Hard
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc2_staging_08_hard_10.svg" alt="Habitat SC2 Staging 08 Hard Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            In the hardest SC2 layouts, RB-CBS dramatically reduces cumulative cost compared to unconstrained baselines.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC3 Staging 11 – Easy
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc3_staging_11_easy_10.svg" alt="Habitat SC3 Staging 11 Easy Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            SC3 easy cases already feature narrow passages, yet RB-CBS respects the risk cap without hurting success.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC3 Staging 11 – Medium
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc3_staging_11_medium_10.svg" alt="Habitat SC3 Staging 11 Medium Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Medium SC3 scenes show the method trading a small amount of time for significantly lower hazard cost.
+          </h2>
+        </div>
+        <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
+          <h1 class="title" style="margin-bottom: 16px;">
+            Habitat SC3 Staging 11 – Hard
+          </h1>
+          <div style="display: flex; justify-content: center; width: 100%;">
+            <img src="static/images/habitatenv_sc3_staging_11_hard_10.svg" alt="Habitat SC3 Staging 11 Hard Bar Chart"/>
+          </div>
+          <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
+            Even in the hardest SC3 layouts RB-CBS enforces the global risk budget while keeping mission completion high.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Habitat bars carousel -->
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title">Poster</h2>
+      <iframe src="static/files/ICRA_Poster.pdf" width="100%" height="550"></iframe>
+    </div>
+  </div>
+</section> -->
+<!-- End paper poster -->
+
+<!--BibTex citation -->
+<!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @INPROCEEDINGS{11127461,
+          author={Feng, Meng and Parimi, Viraj and Williams, Brian},
+          booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)}, 
+          title={Safe Multi-Agent Navigation Guided by Goal-Conditioned Safe Reinforcement Learning}, 
+          year={2025},
+          volume={},
+          number={},
+          pages={16869-16875},
+          keywords={Training;Visualization;Navigation;Scalability;Heuristic algorithms;Reinforcement learning;Manuals;Distance measurement;Planning;Safety},
+          doi={10.1109/ICRA55743.2025.11127461}}
+      </code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<!-- End of Statcounter Code -->
+</body>
+</html>
