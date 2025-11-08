@@ -111,7 +111,7 @@ body {
 }
 
 .results-carousel {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .results-carousel .item {
@@ -119,20 +119,6 @@ body {
   overflow: hidden;
   padding: 20px;
   font-size: 0;
-}
-
-.results-carousel .slider-navigation-previous,
-.results-carousel .slider-navigation-next {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.results-carousel .slider-navigation-previous {
-  left: -40px;
-}
-
-.results-carousel .slider-navigation-next {
-  right: -40px;
 }
 
 .results-carousel video {
