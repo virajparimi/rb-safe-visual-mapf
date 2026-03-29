@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Risk-Bounded-Safe-Visual-MAPF, Risk-Bounded Safe Visual Multi-Agent Path Finding">
-  <meta property="og:title" content="Risk-Bounded Safe Visual Multi-Agent Path Finding"/>
-  <meta property="og:description" content="Risk-Bounded Safe Visual Navigation using Goal-Conditioned Safe Reinforcement Learning"/>
-  <meta property="og:url" content="rb-safe-visual-mapf-mers.csail.mit.edu"/>
+  <meta name="description" content="Risk-Bounded-Safe-Visual-MAPF, Risk-Bounded Multi-Agent Visual Navigation via Iterative Risk Allocation">
+  <meta property="og:title" content="Risk-Bounded Multi-Agent Visual Navigation via Iterative Risk Allocation"/>
+  <meta property="og:description" content="Risk-Bounded Safe Visual Navigation using Goal-Conditioned Safe Reinforcement Learning via Iterative Risk Allocation"/>
+  <meta property="og:url" content="https://rb-safe-visual-mapf-mers.csail.mit.edu"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/mers_logo.png" />
+  <meta property="og:image" content="static/images/mers_logo.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Risk-Bounded Multi-Agent Visual Navigation via Dynamic Budget Allocation</title>
+  <title>Risk-Bounded Multi-Agent Visual Navigation via Iterative Risk Allocation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -85,7 +85,7 @@
             <a href="https://mers.csail.mit.edu/" target="_blank">
               <img src="static/images/mers_logo.png" alt="MERS" style="width: 100px; vertical-align: middle; margin-right: 10px;">
             </a>
-            <h1>Risk-Bounded Multi-Agent Visual Navigation via Dynamic Budget Allocation</h1>
+            <h1>Risk-Bounded Multi-Agent Visual Navigation via Iterative Risk Allocation</h1>
           </div>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
@@ -99,7 +99,9 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">Massachusetts Institute of Technology<br>
-              <a href="https://openreview.net/pdf?id=W1tW6mCAqJ" target="_blank">ICAPS '25 PRL</a><br>
+              <a href="https://openreview.net/pdf?id=W1tW6mCAqJ" target="_blank">ICAPS '26</a><br>
+              Earlier versions:
+              <a href="https://openreview.net/pdf?id=W1tW6mCAqJ" target="_blank">ICAPS '25 PRL</a>,
               <a href="https://openreview.net/pdf?id=LBuLtnZwvZ" target="_blank">CoRL '25 SAFE-ROL</a><br>
             </span>
           </div>
@@ -108,7 +110,7 @@
             <div class="publication-links">
               <!-- Arxiv PDF link -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2502.17813" target="_blank"
+                <a href="https://arxiv.org/pdf/2509.08157" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -119,12 +121,12 @@
 
               <!-- Github link -->
               <span class="link-block">
-                <a href="https://gitlab.com/mit-mers/safe-visual-mapf" target="_blank"
+                <a href="https://gitlab.com/mit-mers/rb-safe-visual-mapf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (coming soon)</span>
+                  <span>Code</span>
                 </a>
               </span>
 
@@ -193,7 +195,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Safe navigation is essential for autonomous systems operating in hazardous environments, especially when multiple agents must coordinate using just visual inputs over extended time horizons. Traditional planning methods excel at solving long-horizon tasks but rely on predefined distance metrics, while safe Reinforcement Learning (RL) can learn complex behaviors using high-dimensional inputs yet struggles with multi-agent, goal-conditioned scenarios. Recent work combined these paradigms by leveraging goal-conditioned RL (GCRL) to build an intermediate graph from replay buffer states, pruning unsafe edges, and using Conflict-Based Search (CBS) for multi-agent path planning. Although effective, this graph-pruning approach can be overly conservative, limiting mission efficiency by precluding missions that must traverse high‐risk regions. To address this limitation, we propose RB-CBS, a novel extension to CBS that dynamically allocates and adjusts user-specified risk bound (&Delta;) across agents to flexibly trade off safety and speed. Our improved planner ensures that each agent receives a local risk budget (&delta;) enabling more efficient navigation while still respecting overall safety constraints. Experimental results demonstrate that this iterative risk-allocation framework yields superior performance in complex environments, allowing multiple agents to find collision-free paths within the user-specified (&Delta;).
+            Safe navigation is essential for autonomous systems operating in hazardous environments, especially when multiple agents must coordinate using only high-dimensional visual observations. While recent approaches successfully combine Goal-Conditioned RL (GCRL) for graph construction with Conflict-Based Search (CBS) for planning, they typically rely on deleting edges with high risk before running CBS to enforce safety. This binary strategy is overly conservative, precluding feasible missions that require traversing high-risk regions, even when the aggregate risk is acceptable. To address this, we introduce a framework for Risk-Bounded Multi-Agent Path Finding (&Delta;-MAPF), where agents share a user-specified global risk budget (&Delta;). Rather than permanently discarding edges, our framework dynamically distributes per-agent risk budgets (&delta;<sub>i</sub>) during search via an Iterative Risk Allocation (IRA) layer that integrates with a standard CBS planner. We investigate two distribution strategies: a greedy surplus-deficit scheme for rapid feasibility repair, and a market-inspired mechanism that treats risk as a priced resource to guide improved allocation. The market-based mechanism yields a tunable trade-off wherein agents exploit available risk to secure shorter, more efficient paths, but revert to longer, safer detours under tighter budgets. Experiments in complex visual environments show that our dynamic allocation framework achieves higher success rates than baselines and effectively leverages the available safety budget to reduce travel time.
           </p>
         </div>
       </div>
@@ -237,7 +239,7 @@
             <img src="static/images/safe_multi_agent_pointenv_comparison.svg" alt="Multi-Agent Point Navigation Comparison"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
-            Dynamic budget allocation keeps multiple PointNav agents in sync, reducing risk accumulation even when paths intersect in tight corridors.
+            Iterative risk allocation keeps multiple PointNav agents in sync, reducing risk accumulation even when paths intersect in tight corridors.
           </h2>
         </div>
         <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
@@ -248,7 +250,7 @@
             <img src="static/images/safe_multi_agent_habitatenv_comparison.svg" alt="Multi-Agent Habitat Environment Comparison"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 20px;">
-            In photorealistic interiors, RB-CBS coordinates several robots to avoid collisions and high-cost regions better than existing planners.
+            In photorealistic interiors, our approach coordinates several robots to avoid collisions and high-cost regions better than existing planners.
           </h2>
         </div>
       </div>
@@ -292,7 +294,7 @@
             <img src="static/images/pointenv_hard_10.svg" alt="PointNav Hard Scenario Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            Even in the hardest PointNav settings RB-CBS preserves mission feasibility while dramatically lowering experienced risk.
+            Even in the hardest PointNav settings our approach preserves mission feasibility while dramatically lowering experienced risk.
           </h2>
         </div>
       </div>
@@ -314,7 +316,7 @@
             <img src="static/images/habitatenv_sc0_staging_20_easy_10.svg" alt="Habitat SC0 Staging 20 Easy Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            RB-CBS preserves easy-stage success rates in SC0 while keeping cumulative hazard cost within the specified bound.
+            Our approach preserves easy-stage success rates in SC0 while keeping cumulative hazard cost within the specified bound.
           </h2>
         </div>
         <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
@@ -347,7 +349,7 @@
             <img src="static/images/habitatenv_sc2_staging_08_easy_10.svg" alt="Habitat SC2 Staging 08 Easy Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            Stage SC2 easy apartments show RB-CBS staying inside the safety envelope with negligible slowdown.
+            Stage SC2 easy apartments show our approach staying inside the safety envelope with negligible slowdown.
           </h2>
         </div>
         <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
@@ -369,7 +371,7 @@
             <img src="static/images/habitatenv_sc2_staging_08_hard_10.svg" alt="Habitat SC2 Staging 08 Hard Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            In the hardest SC2 layouts, RB-CBS dramatically reduces cumulative cost compared to unconstrained baselines.
+            In the hardest SC2 layouts, our approach dramatically reduces cumulative cost compared to unconstrained baselines.
           </h2>
         </div>
         <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
@@ -380,7 +382,7 @@
             <img src="static/images/habitatenv_sc3_staging_11_easy_10.svg" alt="Habitat SC3 Staging 11 Easy Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            SC3 easy cases already feature narrow passages, yet RB-CBS respects the risk cap without hurting success.
+            SC3 easy cases already feature narrow passages, yet our approach respects the risk cap without hurting success.
           </h2>
         </div>
         <div class="item" style="display: flex; flex-direction: column; align-items: center; padding: 80px 20px 40px;">
@@ -402,7 +404,7 @@
             <img src="static/images/habitatenv_sc3_staging_11_hard_10.svg" alt="Habitat SC3 Staging 11 Hard Bar Chart"/>
           </div>
           <h2 class="subtitle has-text-centered" style="margin-top: 16px;">
-            Even in the hardest SC3 layouts RB-CBS enforces the global risk budget while keeping mission completion high.
+            Even in the hardest SC3 layouts our approach enforces the global risk budget while keeping mission completion high.
           </h2>
         </div>
       </div>
@@ -423,23 +425,21 @@
 <!-- End paper poster -->
 
 <!--BibTex citation -->
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @INPROCEEDINGS{11127461,
-          author={Feng, Meng and Parimi, Viraj and Williams, Brian},
-          booktitle={2025 IEEE International Conference on Robotics and Automation (ICRA)}, 
-          title={Safe Multi-Agent Navigation Guided by Goal-Conditioned Safe Reinforcement Learning}, 
-          year={2025},
-          volume={},
-          number={},
-          pages={16869-16875},
-          keywords={Training;Visualization;Navigation;Scalability;Heuristic algorithms;Reinforcement learning;Manuals;Distance measurement;Planning;Safety},
-          doi={10.1109/ICRA55743.2025.11127461}}
+        @inproceedings{parimi2026rbvisualmapf,
+          author    = {Viraj Parimi and Brian C. Williams},
+          title     = {Risk-Bounded Multi-Agent Visual Navigation via Iterative Risk Allocation},
+          booktitle = {Proceedings of the 36th International Conference on Automated Planning and Scheduling (ICAPS 2026)},
+          year      = {2026},
+          address   = {Dublin, Ireland},
+          note      = {To appear}
+        }
       </code></pre>
     </div>
-</section> -->
+</section>
 <!--End BibTex citation -->
 
 
