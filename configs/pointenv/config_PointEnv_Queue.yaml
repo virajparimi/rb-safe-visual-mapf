@@ -1,0 +1,61 @@
+agent:
+    discount: 1
+    ensemble_size: 3
+    num_bins: 20
+    actor_update_interval: 1
+    targets_update_interval: 5
+    tau: 0.05
+    use_distributional_rl: true
+    # cost configs
+    cost_limit: 10.0
+    cost_min: 0.0
+    cost_max: 20
+    cost_N: 20
+    cost_critic_lr: 0.001
+    lambda_lr: 0.001
+    lambda_optimizer: "Adam"
+ckpt_dir: ./workdirs/train_CentralObstacle/
+#ckpt_dir: ./workdirs/debug_FourRooms/
+env:
+    walls: CentralObstacle
+    # walls: FourRooms
+    resize_factor: 5
+    thin: false
+    # only step-wise max limit, to prune unnecessary calculation
+    cost_limit: 20.0
+wrappers:
+    SafeGoalConditionedPointQueueWrapper:
+        prob_constraint: 0.5
+        min_dist: 0 
+        max_dist: 5
+        min_cost: 0.3
+        max_cost: 1.0
+        threshold_distance: 1.0
+time_limit:
+    max_episode_steps: 20
+cost_function:
+    name: "linear"
+    radius: 25.0
+replay_buffer:
+    max_size: 1000
+runner:
+    batch_size_opt: 64
+    collect_steps: 10
+    eval_interval: 1000
+    initial_collect_steps: 1000
+    num_eval_episodes: 10
+    num_iterations: 300000
+    opt_steps: 1
+    warmup_epochs: 1000
+    eval_distances: [2, 5, 10]
+    eval_cost_intervals: [5, 10, 20]
+    verbose: false
+    sample_size: 50
+    num_train_pbs_per_ref: 20
+    cost_min_dist: 0.0
+    cost_max_dist: 5.0
+    use_uncertainty: true
+    uncertainty_ub: 1.0
+    uncertainty_lb: 0.0
+device: "cpu"
+seed: 0

@@ -1,0 +1,229 @@
+<--------------------------------------------------RB-CBS-------------------------------------------------->
+Cost of path for agent 0: 0.0
+Cost of path for agent 1: 1.0
+Cost of path for agent 2: 0.0
+Cost of path for agent 3: 1.0
+Cost of path for agent 4: 2.0
+Cost of solution: 57.0
+Accumulated Risk: 4.0
+Number of expanded nodes: 907
+Number of generated nodes: 1437
+.
+----------------------------------------------------------------------
+Ran 1 test in 6.998s
+
+OK
+
+
+Price Clearing (Hard; 5 Agents; Centerdot)
+
+INFO:root:A-Star failed for agents: [1]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+  2%|█▋                                                                                | 1/50 [00:15<12:50, 15.73s/it]INFO:root:A-Star failed for agents: [0, 1]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+  4%|███▎                                                                              | 2/50 [00:29<11:46, 14.71s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+  6%|████▉                                                                             | 3/50 [00:45<11:50, 15.11s/it]INFO:root:A-Star failed for agents: [1, 2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+  8%|██████▌                                                                           | 4/50 [01:01<11:57, 15.60s/it]INFO:root:A-Star failed for agents: [0, 1]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 10%|████████▏                                                                         | 5/50 [01:11<10:10, 13.56s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 12%|█████████▊                                                                        | 6/50 [01:19<08:34, 11.68s/it]INFO:root:A-Star failed for agents: [2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 14%|███████████▍                                                                      | 7/50 [01:25<07:07,  9.94s/it]INFO:root:A-Star failed for agents: [0, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 16%|█████████████                                                                     | 8/50 [01:46<09:16, 13.26s/it]INFO:root:A-Star failed for agents: [2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 18%|██████████████▊                                                                   | 9/50 [01:49<06:48,  9.96s/it]INFO:root:A-Star failed for agents: [0, 2, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 20%|████████████████▏                                                                | 10/50 [01:55<05:52,  8.82s/it]INFO:root:A-Star failed for agents: [4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 22%|█████████████████▊                                                               | 11/50 [02:08<06:32, 10.06s/it]INFO:root:A-Star failed for agents: [4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 24%|███████████████████▍                                                             | 12/50 [02:10<04:48,  7.58s/it]INFO:root:A-Star failed for agents: [2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 26%|█████████████████████                                                            | 13/50 [02:37<08:24, 13.64s/it]INFO:root:A-Star failed for agents: [1]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 28%|██████████████████████▋                                                          | 14/50 [02:39<06:06, 10.17s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 30%|████████████████████████▎                                                        | 15/50 [02:49<05:50, 10.00s/it]INFO:root:A-Star failed for agents: [0, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 32%|█████████████████████████▉                                                       | 16/50 [03:01<05:56, 10.48s/it]INFO:root:A-Star failed for agents: [0]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 34%|███████████████████████████▌                                                     | 17/50 [05:36<29:41, 54.00s/it]INFO:root:A-Star failed for agents: [0, 1, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 36%|█████████████████████████████▏                                                   | 18/50 [05:48<22:04, 41.39s/it]INFO:root:A-Star failed for agents: [1, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 38%|██████████████████████████████▊                                                  | 19/50 [05:51<15:28, 29.94s/it]INFO:root:A-Star failed for agents: [2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 40%|████████████████████████████████▍                                                | 20/50 [05:56<11:14, 22.49s/it]INFO:root:A-Star failed for agents: [2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 42%|██████████████████████████████████                                               | 21/50 [06:00<08:06, 16.78s/it]INFO:root:A-Star failed for agents: [1, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 44%|███████████████████████████████████▋                                             | 22/50 [06:01<05:43, 12.25s/it]INFO:root:A-Star failed for agents: [0, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 46%|█████████████████████████████████████▎                                           | 23/50 [06:03<04:05,  9.11s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 48%|██████████████████████████████████████▉                                          | 24/50 [06:06<03:04,  7.10s/it]INFO:root:A-Star failed for agents: [1, 2, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 50%|████████████████████████████████████████▌                                        | 25/50 [06:09<02:32,  6.10s/it]INFO:root:A-Star failed for agents: [1, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 52%|██████████████████████████████████████████                                       | 26/50 [06:19<02:55,  7.31s/it]INFO:root:A-Star failed for agents: [3, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 54%|███████████████████████████████████████████▋                                     | 27/50 [06:28<02:54,  7.57s/it]INFO:root:A-Star failed for agents: [2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 56%|█████████████████████████████████████████████▎                                   | 28/50 [06:45<03:48, 10.39s/it]INFO:root:A-Star failed for agents: [0, 2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 58%|██████████████████████████████████████████████▉                                  | 29/50 [07:02<04:22, 12.48s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 60%|████████████████████████████████████████████████▌                                | 30/50 [07:13<03:58, 11.91s/it]INFO:root:A-Star failed for agents: [0, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 62%|██████████████████████████████████████████████████▏                              | 31/50 [07:37<04:58, 15.71s/it]INFO:root:A-Star failed for agents: [2, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 64%|███████████████████████████████████████████████████▊                             | 32/50 [07:40<03:33, 11.87s/it]INFO:root:A-Star failed for agents: [2, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 66%|█████████████████████████████████████████████████████▍                           | 33/50 [07:45<02:44,  9.70s/it]INFO:root:A-Star failed for agents: [0]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 68%|███████████████████████████████████████████████████████                          | 34/50 [08:07<03:36, 13.52s/it]INFO:root:A-Star failed for agents: [2, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 70%|████████████████████████████████████████████████████████▋                        | 35/50 [08:15<02:58, 11.89s/it]INFO:root:A-Star failed for agents: [2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 72%|██████████████████████████████████████████████████████████▎                      | 36/50 [09:01<05:09, 22.14s/it]INFO:root:A-Star failed for agents: [2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 74%|███████████████████████████████████████████████████████████▉                     | 37/50 [09:08<03:47, 17.50s/it]INFO:root:A-Star failed for agents: [0, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 76%|█████████████████████████████████████████████████████████████▌                   | 38/50 [09:20<03:10, 15.90s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 78%|███████████████████████████████████████████████████████████████▏                 | 39/50 [09:23<02:13, 12.12s/it]INFO:root:A-Star failed for agents: [0, 1]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 80%|████████████████████████████████████████████████████████████████▊                | 40/50 [09:26<01:32,  9.30s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 82%|██████████████████████████████████████████████████████████████████▍              | 41/50 [10:59<05:10, 34.48s/it]INFO:root:A-Star failed for agents: [1, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 84%|████████████████████████████████████████████████████████████████████             | 42/50 [11:02<03:19, 24.99s/it]INFO:root:A-Star failed for agents: [0, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 86%|█████████████████████████████████████████████████████████████████████▋           | 43/50 [11:19<02:37, 22.49s/it]INFO:root:A-Star failed for agents: [0, 2, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 88%|███████████████████████████████████████████████████████████████████████▎         | 44/50 [11:24<01:42, 17.15s/it]INFO:root:A-Star failed for agents: [1, 3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 90%|████████████████████████████████████████████████████████████████████████▉        | 45/50 [11:27<01:05, 13.20s/it]INFO:root:A-Star failed for agents: [3]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 92%|██████████████████████████████████████████████████████████████████████████▌      | 46/50 [11:48<01:02, 15.52s/it]INFO:root:A-Star failed for agents: [3, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 94%|████████████████████████████████████████████████████████████████████████████▏    | 47/50 [11:52<00:35, 11.85s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 96%|█████████████████████████████████████████████████████████████████████████████▊   | 48/50 [11:58<00:20, 10.33s/it]INFO:root:A-Star failed for agents: [3, 4]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+ 98%|███████████████████████████████████████████████████████████████████████████████▍ | 49/50 [12:07<00:09,  9.93s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. No path found.
+100%|█████████████████████████████████████████████████████████████████████████████████| 50/50 [12:16<00:00, 14.74s/it]
+
+
+
+Price Clearing Updated:
+
+INFO:root:Starting from index: 0
+  0%|                                                                                                                             | 0/50 [00:00<?, ?it/s]/scratch/Work/Multi_Agent_Research/Hierarchical_Constrained_SORB/cc-sorb-rev/pud/algos/lagrange/drl_ddpg_lag.py:117: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:254.)
+  observation=torch.FloatTensor(state["observation"]),
+INFO:root:A-Star failed for agents: [1]
+Time to find paths:  168.48623776435852
+  2%|██▎                                                                                                               | 1/50 [02:50<2:18:55, 170.11s/it]INFO:root:A-Star failed for agents: [0, 1]
+Time to find paths:  11.686750888824463
+  4%|████▌                                                                                                              | 2/50 [03:03<1:02:15, 77.82s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  0.909282922744751
+  6%|███████                                                                                                              | 3/50 [03:05<34:01, 43.43s/it]INFO:root:A-Star failed for agents: [1, 2]
+Time to find paths:  264.66377997398376
+  8%|█████████                                                                                                         | 4/50 [07:32<1:40:43, 131.38s/it]INFO:root:A-Star failed for agents: [0, 1]
+Time to find paths:  0.18033766746520996
+ 10%|███████████▌                                                                                                       | 5/50 [07:33<1:03:28, 84.63s/it]INFO:root:A-Star failed for agents: [0, 2]
+Time to find paths:  8.677866458892822
+ 12%|██████████████                                                                                                       | 6/50 [07:44<43:31, 59.35s/it]INFO:root:A-Star failed for agents: [2, 3]
+Time to find paths:  61.71268844604492
+ 14%|████████████████▍                                                                                                    | 7/50 [08:47<43:28, 60.66s/it]INFO:root:A-Star failed for agents: [0, 3]
+Time to find paths:  0.2798168659210205
+ 16%|██████████████████▋                                                                                                  | 8/50 [08:49<29:21, 41.93s/it]INFO:root:A-Star failed for agents: [2, 3]
+Time to find paths:  0.17864346504211426
+ 18%|█████████████████████                                                                                                | 9/50 [08:50<20:03, 29.36s/it]INFO:root:A-Star failed for agents: [0, 2, 4]
+Time to find paths:  13.447348594665527
+ 20%|███████████████████████▏                                                                                            | 10/50 [09:05<16:37, 24.94s/it]INFO:root:A-Star failed for agents: [4]
+Time to find paths:  10.445712566375732
+ 22%|█████████████████████████▌                                                                                          | 11/50 [09:18<13:38, 20.99s/it]INFO:root:A-Star failed for agents: [4]
+Time to find paths:  0.3152923583984375
+ 24%|███████████████████████████▊                                                                                        | 12/50 [09:19<09:36, 15.16s/it]INFO:root:A-Star failed for agents: [2, 3]
+Time to find paths:  1.6799499988555908
+ 26%|██████████████████████████████▏                                                                                     | 13/50 [09:23<07:07, 11.56s/it]INFO:root:A-Star failed for agents: [1]
+Time to find paths:  0.9053666591644287
+ 28%|████████████████████████████████▍                                                                                   | 14/50 [09:25<05:17,  8.81s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  0.2518744468688965
+ 30%|██████████████████████████████████▊                                                                                 | 15/50 [09:27<03:55,  6.72s/it]INFO:root:A-Star failed for agents: [0, 3]
+Time to find paths:  2.2631964683532715
+ 32%|█████████████████████████████████████                                                                               | 16/50 [09:31<03:18,  5.85s/it]INFO:root:A-Star failed for agents: [0]
+Time to find paths:  0.7722599506378174
+ 34%|███████████████████████████████████████▍                                                                            | 17/50 [09:33<02:38,  4.81s/it]INFO:root:A-Star failed for agents: [0, 1, 3]
+Time to find paths:  7.08720326423645
+ 36%|█████████████████████████████████████████▊                                                                          | 18/50 [09:42<03:11,  5.99s/it]INFO:root:A-Star failed for agents: [1, 3]
+Time to find paths:  1.6571145057678223
+ 38%|████████████████████████████████████████████                                                                        | 19/50 [09:45<02:39,  5.15s/it]INFO:root:A-Star failed for agents: [2]
+Time to find paths:  2.36240291595459
+ 40%|██████████████████████████████████████████████▍                                                                     | 20/50 [09:49<02:23,  4.80s/it]INFO:root:A-Star failed for agents: [2, 3]
+Time to find paths:  29.319130897521973
+ 42%|████████████████████████████████████████████████▋                                                                   | 21/50 [10:20<06:06, 12.64s/it]INFO:root:A-Star failed for agents: [1, 3]
+Time to find paths:  16.995012283325195
+ 44%|███████████████████████████████████████████████████                                                                 | 22/50 [10:39<06:43, 14.43s/it]INFO:root:A-Star failed for agents: [0, 4]
+Time to find paths:  0.24922800064086914
+ 46%|█████████████████████████████████████████████████████▎                                                              | 23/50 [10:40<04:47, 10.66s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  0.21449995040893555
+ 48%|███████████████████████████████████████████████████████▋                                                            | 24/50 [10:42<03:28,  8.00s/it]INFO:root:A-Star failed for agents: [1, 2, 4]
+Time to find paths:  8.933457136154175
+ 50%|██████████████████████████████████████████████████████████                                                          | 25/50 [10:53<03:39,  8.77s/it]INFO:root:A-Star failed for agents: [1, 3]
+Time to find paths:  0.18257451057434082
+ 52%|████████████████████████████████████████████████████████████▎                                                       | 26/50 [10:55<02:39,  6.66s/it]INFO:root:A-Star failed for agents: [3, 4]
+Time to find paths:  6.77494740486145
+ 54%|██████████████████████████████████████████████████████████████▋                                                     | 27/50 [11:03<02:45,  7.20s/it]INFO:root:A-Star failed for agents: [2]
+Time to find paths:  1.0458009243011475
+ 56%|████████████████████████████████████████████████████████████████▉                                                   | 28/50 [11:06<02:08,  5.84s/it]INFO:root:A-Star failed for agents: [0, 2, 3]
+Time to find paths:  9.391467809677124
+ 58%|███████████████████████████████████████████████████████████████████▎                                                | 29/50 [11:17<02:35,  7.39s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  3.9548709392547607
+ 60%|█████████████████████████████████████████████████████████████████████▌                                              | 30/50 [11:22<02:17,  6.86s/it]INFO:root:A-Star failed for agents: [0, 3]
+Time to find paths:  0.18194079399108887
+ 62%|███████████████████████████████████████████████████████████████████████▉                                            | 31/50 [11:24<01:41,  5.33s/it]INFO:root:A-Star failed for agents: [2, 4]
+Time to find paths:  19.605830192565918
+ 64%|██████████████████████████████████████████████████████████████████████████▏                                         | 32/50 [11:45<03:01, 10.09s/it]INFO:root:A-Star failed for agents: [2, 4]
+Time to find paths:  1.8725321292877197
+ 66%|████████████████████████████████████████████████████████████████████████████▌                                       | 33/50 [11:49<02:17,  8.11s/it]INFO:root:A-Star failed for agents: [0]
+Time to find paths:  7.489238500595093
+ 68%|██████████████████████████████████████████████████████████████████████████████▉                                     | 34/50 [11:58<02:14,  8.40s/it]INFO:root:A-Star failed for agents: [2, 4]
+Time to find paths:  5.515200614929199
+ 70%|█████████████████████████████████████████████████████████████████████████████████▏                                  | 35/50 [12:05<02:00,  8.03s/it]INFO:root:A-Star failed for agents: [2]
+Time to find paths:  0.3708219528198242
+ 72%|███████████████████████████████████████████████████████████████████████████████████▌                                | 36/50 [12:07<01:27,  6.23s/it]INFO:root:A-Star failed for agents: [2, 3]
+Time to find paths:  5.883159399032593
+ 74%|█████████████████████████████████████████████████████████████████████████████████████▊                              | 37/50 [12:15<01:25,  6.60s/it]INFO:root:A-Star failed for agents: [0, 3]
+Time to find paths:  5.272821426391602
+ 76%|████████████████████████████████████████████████████████████████████████████████████████▏                           | 38/50 [12:21<01:20,  6.69s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  0.1882476806640625
+ 78%|██████████████████████████████████████████████████████████████████████████████████████████▍                         | 39/50 [12:23<00:57,  5.21s/it]INFO:root:A-Star failed for agents: [0, 1]
+Time to find paths:  3.854736328125
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████▊                       | 40/50 [12:29<00:52,  5.29s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. Time limit reached.
+ 82%|███████████████████████████████████████████████████████████████████████████████████████████████                     | 41/50 [17:30<14:07, 94.19s/it]INFO:root:A-Star failed for agents: [1, 4]
+Time to find paths:  7.126707077026367
+ 84%|█████████████████████████████████████████████████████████████████████████████████████████████████▍                  | 42/50 [17:39<09:08, 68.57s/it]INFO:root:A-Star failed for agents: [0, 4]
+Time to find paths:  9.266357421875
+ 86%|███████████████████████████████████████████████████████████████████████████████████████████████████▊                | 43/50 [17:50<05:58, 51.28s/it]INFO:root:A-Star failed for agents: [0, 2, 3]
+Time to find paths:  13.465182542800903
+ 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████              | 44/50 [18:05<04:02, 40.44s/it]INFO:root:A-Star failed for agents: [1, 3]
+Time to find paths:  0.18112802505493164
+ 90%|████████████████████████████████████████████████████████████████████████████████████████████████████████▍           | 45/50 [18:07<02:24, 28.84s/it]INFO:root:A-Star failed for agents: [3]
+Time to find paths:  6.303282737731934
+ 92%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▋         | 46/50 [18:15<01:30, 22.56s/it]INFO:root:A-Star failed for agents: [3, 4]
+Time to find paths:  0.41359853744506836
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████       | 47/50 [18:17<00:49, 16.39s/it]INFO:root:A-Star failed for agents: [0, 2]
+ERROR:root:Error: CBS failed to find a solution. Time limit reached.
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████▍    | 48/50 [23:21<03:25, 102.61s/it]INFO:root:A-Star failed for agents: [3, 4]
+Time to find paths:  63.03107976913452
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋  | 49/50 [24:25<01:31, 91.24s/it]INFO:root:A-Star failed for agents: [0, 2]
+Time to find paths:  5.134226322174072
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [24:32<00:00, 29.45s/it]

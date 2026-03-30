@@ -1,0 +1,23 @@
+agent:
+    discount: 1
+    ensemble_size: 3
+    num_bins: 20
+    targets_update_interval: 5
+    tau: 0.05
+    use_distributional_rl: true
+ckpt_dir: ./workdirs/uvfddpg_FourRooms/
+env:
+    env_name: FourRooms
+    max_episode_steps: 20
+    resize_factor: 5
+    thin: false
+replay_buffer:
+    max_size: 1000
+runner:
+    batch_size_opt: 64
+    collect_steps: 2
+    eval_interval: 1000
+    initial_collect_steps: 1000
+    num_iterations: 30000
+    opt_steps: 1
+seed: 0

@@ -1,0 +1,9 @@
+sensor_msgs/Image observation_forward
+sensor_msgs/Image observation_right
+sensor_msgs/Image observation_backward
+sensor_msgs/Image observation_left
+
+sensor_msgs/Image goal_forward
+sensor_msgs/Image goal_right
+sensor_msgs/Image goal_backward
+sensor_msgs/Image goal_left

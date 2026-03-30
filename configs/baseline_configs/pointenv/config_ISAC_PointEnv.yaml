@@ -1,0 +1,46 @@
+seed: 0
+
+env:
+  thin: False
+  max_steps: 20
+  num_agents: 2
+  resize_factor: 3
+  action_noise: 0.0
+  walls: CenterDot
+  reward_type: dense
+  apsp_path: #pud/envs/precompiles/CentralObstacle_5_apsp.pkl
+  device: ??? # These values will be populated dynamically
+
+model:
+  shared_parameters: True
+  centralised_critic: False # MASAC if True, ISAC if False
+
+collector:
+  frames_per_batch: 61_440 # Frames sampled each sampling iteration
+  n_iters: 1000 # Number of sampling/training iterations
+  total_frames: ???
+
+buffer:
+  memory_size: ???
+
+loss:
+  gamma: 0.9
+  tau: 0.005 # For target net
+
+train:
+  num_epochs: 45  # optimization steps per batch of data collected
+  minibatch_size: 4096 # size of minibatches used in each epoch
+  lr: 5e-5
+  max_grad_norm: 40.0
+  device: ???
+  ckpt_path: 
+
+eval:
+  evaluation_interval: 5
+  evaluation_episodes: 200
+
+logger:
+  backend: tensorboard # Delete to remove logging
+  project_name: null
+  group_name: null
+  logdir: /train_ISAC_CenterDot/

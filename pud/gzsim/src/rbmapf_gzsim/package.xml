@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rbmapf_gzsim</name>
+  <version>0.0.0</version>
+  <description>ROS 2 Gazebo simulation, visualization, and drone control nodes for risk-bounded multi-agent path finding in point and Habitat environments.</description>
+  <maintainer email="parimiviraj@gmail.com">mers</maintainer>
+  <license>MIT</license>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <depend>rclpy</depend>
+  <depend>launch</depend>
+  <depend>tf2_ros</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>launch_ros</depend>
+  <depend>gazebo_ros</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rbmapf_interfaces</depend>
+  <depend>visualization_msgs</depend>
+  <depend>builtin_interfaces</depend>
+  <depend>ament_index_python</depend>
+
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>px4_msgs</exec_depend>
+  <exec_depend>crazyflie</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>crazyflie_interfaces</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

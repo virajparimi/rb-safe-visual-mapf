@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="sc2_staging_08">
+    <link name="sc2_staging_08">
+      <pose> 0 0 0 0 0 0</pose>
+      <collision name="crazyflie/body_collision">
+        <geometry>
+            <mesh>
+                <uri>meshes/sc2_staging_08.dae</uri>
+            </mesh>
+        </geometry>
+      </collision>
+      <visual name="crazyflie/body_visual">
+        <geometry>
+            <mesh>
+                <uri>meshes/sc2_staging_08.dae</uri>
+            </mesh>
+        </geometry>
+      </visual>
+      <light name="lamp" type="point">
+        <pose>0 0 7 0 0 0</pose>
+        <diffuse>1 1 1 1</diffuse>
+        <specular>0.2 0.2 0.2 1</specular>
+        <attenuation>
+          <range>10</range>
+          <constant>0.5</constant>
+          <linear>0.01</linear>
+          <quadratic>0.001</quadratic>
+        </attenuation>
+        <cast_shadows>false</cast_shadows>
+      </light>
+    </link>
+</model>
+</sdf>

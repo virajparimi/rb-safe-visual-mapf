@@ -1,0 +1,19 @@
+HabitatSim:
+  default_settings:
+    scene: external_data/scene_datasets/habitat-test-scenes/skokloster-castle.glb  # Scene path
+    height: 256 # Spatial resolution of the observations [height, width]
+    width: 256  
+    default_agent: 0  # Index of the default agent
+    sensor_height: 1.5  # Height of sensors in meters relative to the agent
+# ReplicaCAD Default config
+ReplicaCAD:
+  default_settings: 
+      height: 720 # Spatial resolution of the observations [height, width]
+      width: 1280 
+      scene_dataset: "external_data/replica_cad/replica_cad_baked_lighting/replicaCAD_baked.scene_dataset_config.json"  # dataset path
+      scene: "sc1_staging_00"  # Scene path
+      default_agent: 0
+      sensor_height: 1.5  # Height of sensors in meters
+      sensor_pitch: 0.0  # sensor pitch (x rotation in rads)
+      seed: 1
+      enable_physics: False  # enable dynamics simulation

@@ -1,0 +1,66 @@
+agent:
+    cost_N: 40
+    cost_min: 0.0
+    cost_max: 40.0
+    cost_limit: 1.0
+    cost_critic_lr: 0.0001
+    tau: 0.05
+    discount: 1
+    num_bins: 20
+    ensemble_size: 3
+    lambda_lr: 0.001
+    actor_lr: 0.0001
+    critic_lr: 0.0003
+    lambda_optimizer: Adam
+    actor_update_interval: 1
+    targets_update_interval: 5
+    use_distributional_rl: true
+ckpt_dir: runs_debug/results/FourRoomsModified
+cost_function:
+    name: linear
+    radius: 3.0
+device: cpu
+env:
+    thin: false
+    cost_limit: 0.0
+    resize_factor: 5
+    action_noise: 0.0
+    walls: FourRoomsModified
+replay_buffer:
+    max_size: 5000
+runner:
+    collect_steps: 10
+    batch_size_opt: 64
+    cost_max_dist: 5.0
+    cost_min_dist: 0.0
+    eval_cost_intervals:
+    - 0
+    - 3
+    - 5
+    eval_distances:
+    - 2
+    - 5
+    - 10
+    opt_steps: 1
+    verbose: false
+    sample_size: 50
+    warmup_epochs: 1000
+    uncertainty_lb: 0.0
+    uncertainty_ub: 1.0
+    eval_interval: 1000
+    use_uncertainty: true
+    num_eval_episodes: 10
+    num_iterations: 300000
+    num_train_pbs_per_ref: 20
+    initial_collect_steps: 1000
+seed: 0
+time_limit:
+    max_episode_steps: 20
+wrappers:
+    SafeGoalConditionedPointQueueWrapper:
+        max_cost: 40.0
+        max_dist: 20
+        min_cost: 5.0
+        min_dist: 0
+        prob_constraint: 0.5
+        threshold_distance: 0.5

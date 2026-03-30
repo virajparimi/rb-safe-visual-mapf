@@ -1,0 +1,69 @@
+gz_version:
+  default: "harmonic"
+  description: "Gazebo version to run. Options: classic or harmonic."
+
+num_drones:
+  default: "2"
+  description: "Number of drones to spawn."
+
+use_crazyflies:
+  default: "True"
+  description: "Use Crazyflies."
+
+use_hardware:
+  default: "False"
+  description: "Are we using real hardware drones"
+
+model_jinja:
+  default: "models/crazyflie/model.sdf.jinja"
+  description: "Path to the Jinja template for Crazyflie SDF model."
+
+generated_assets_dir:
+  default: "/tmp/rbmapf_gzsim"
+  description: "Writable directory for generated Gazebo and bridge assets."
+
+risk_bound_percent:
+  default: "0.5"
+  description: "Normalized CBS risk-bound percentage in [0, 1]; requires precomputed *_icaps pbs/lb/ub data."
+
+problem_index:
+  default: "0"
+  description: "Index of the grouped precomputed problem to use from problems/pbs_<num_agents>.npy."
+
+px4_target:
+  default: "px4_sitl_default"
+  description: "PX4 build target (no default)."
+
+px4_src_path:
+  default: "/home/mers/Drone_Simulator/PX4-Autopilot"
+  description: "Path to the PX4 source (no default)."
+
+config_file:
+  default: "../../models/CenterDot/lag/2024-07-30-21-31-48/bk/bk_config.yaml"
+  # default: "../../models/SC3_Staging_11/lag/2024-09-11-15-53-23/bk/config.yaml"
+  description: "Path to control config YAML (no default)."
+
+problem_set_file:
+  default: "../plots/data/centerdot_icaps/easy.npz"
+  # default: "../envs/safe_pointenv/illustration_set/CenterDot_resize_3_linear_r3_4pts.txt"
+  # default: "../plots/data/illustration_pbs.pkl"
+  # default: "../plots/data/sc0_staging_20/easy.npz"
+  description: "Path to problem set file (no default)."
+
+constrained_ckpt_file:
+  default: "../../models/CenterDot/lag/2024-07-30-21-31-48/ckpt/ckpt_0600000"
+  # default: "../../models/SC3_Staging_11/lag/2024-09-11-15-53-23/ckpt/ckpt_0460000"
+  description: "Path to constrained policy checkpoint (no default)."
+
+unconstrained_ckpt_file:
+  default: "../../models/CenterDot/ckpt/ckpt_0300000"
+  # default: "../../models/SC3_Staging_11/ckpt/ckpt_0722500"
+  description: "Path to unconstrained policy checkpoint (no default)."
+
+habitat:
+  default: "False"
+  description: "Use Habitat for navigation environment."
+
+world_file:
+  default: "models/default.sdf"
+  description: "Path to the Gazebo world file (no default)."

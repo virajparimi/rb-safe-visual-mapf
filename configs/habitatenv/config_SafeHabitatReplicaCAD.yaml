@@ -1,0 +1,57 @@
+agent:
+    embedding_size: 256
+    ensemble_size: 3
+    num_bins: 20
+    actor_update_interval: 1
+    targets_update_interval: 5
+    tau: 0.05
+    use_distributional_rl: true
+    actor_lr: 1.0e-6
+    critic_lr: 1.0e-5
+agent_cost_kwargs:
+    cost_limit: 1.0
+    cost_min: 0.0
+    cost_max: 40.0
+    cost_N: 40
+    cost_critic_lr: 0.0001
+    lambda_lr: 0.001
+    lambda_optimizer: "Adam"
+    lagrangian_multiplier_init: 0.0
+    lagrange_on: False
+ckpt_dir: ./workdirs/train_Habitat/
+env:
+    env_type: ReplicaCAD
+    height: 0.0
+    action_noise: 0.0
+    sensor_type: "rgb"
+    simulator_settings:
+        scene_dataset: "external_data/replica_cad/replica_cad_baked_lighting/replicaCAD_baked.scene_dataset_config.json"  # dataset path
+        scene: "sc1_staging_00"  # Scene path
+        width: 32
+        height: 32
+        default_agent: 0
+        sensor_height: 1.5
+cost_function:
+    name: linear
+    radius: 1.0
+wrappers:
+    SafeGoalConditionedHabitatPointQueueWrapper:
+        min_dist: 1 # need to move before reaching goal
+        max_dist: 4
+        min_cost: 0
+        max_cost: 10
+        prob_constraint: 0.8
+        threshold_distance: 0.2
+replay_buffer:
+    max_size: 100000
+time_limit:
+    max_episode_steps: 20
+runner:
+    batch_size_opt: 64
+    collect_steps: 10 # 2
+    eval_interval: 10000 # 1000
+    initial_collect_steps: 1000 # 1000
+    num_iterations: 3000000
+    opt_steps: 1
+device: "cpu"
+seed: 0

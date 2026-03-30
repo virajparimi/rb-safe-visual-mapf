@@ -1,0 +1,51 @@
+(defpackage #:scenario1)
+(in-package #:scenario1)
+
+(define-control-program start-mission-one-drone-one ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 120)
+	:contingent t
+)))
+
+(define-control-program start-mission-one-drone-two ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 120)
+	:contingent t
+)))
+
+(define-control-program land-drone-one ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 5)
+)))
+
+(define-control-program land-drone-two ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 5)
+)))
+
+(define-control-program znoop-one ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 1)
+)))
+
+(define-control-program znoop-two ()
+	(declare (primitive)
+	(duration (simple :lower-bound 0 :upper-bound 1)
+)))
+
+(define-control-program main ()
+	(with-temporal-constraint (simple-temporal :upper-bound 500)
+	(sequence (:slack nil)
+		(parallel (:slack t)
+			(start-mission-one-drone-one)
+			(parallel (:slack t)
+				(start-mission-one-drone-two)
+				(znoop-one)
+			)
+		)
+		(parallel (:slack t)
+			(land-drone-one)
+			(land-drone-two)
+		)
+		(znoop-two)
+)))
